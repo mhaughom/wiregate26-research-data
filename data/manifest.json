@@ -1,0 +1,50 @@
+{
+  "record_version": 1,
+  "recorded_on": "2026-07-14",
+  "project": "WIREGATE 26",
+  "coordinate_reference": {
+    "pitch_length_m": 105.03,
+    "pitch_width_m": 68.03,
+    "incident_xy": "normalized pitch coordinates",
+    "trajectory_rows": "[relative_time_s, pitch_x_m, pitch_y_m, height_m]"
+  },
+  "comparison": {
+    "extracted_tracks": 15,
+    "in_play_tracks": 14,
+    "excluded_after_goal_timestamp_ms": 1783811397013,
+    "incident_timestamp_ms": 1783806435336
+  },
+  "files": [
+    {
+      "path": "data/incident_ball_track.csv",
+      "role": "recorded incident ball coordinates",
+      "sample_count": 1203,
+      "duration_s": 24.084,
+      "first_source_timestamp_ms": 1783806426627,
+      "last_source_timestamp_ms": 1783806450711,
+      "sha256": "936556753ad3d8e9ab4c01576dda73b6be92e440cf3733d417010529c47b6562"
+    },
+    {
+      "path": "data/kick_analysis_arcs.json",
+      "role": "recorded long-kick analysis arcs",
+      "track_count": 15,
+      "sample_count": 3174,
+      "aggregate_duration_s": 63.245,
+      "sha256": "8ef3778e8ab239bf4123fc4f54d7d70066d90a57a68d3568618eab9d2288e1fc"
+    },
+    {
+      "path": "data/kick_playback_tracks.json",
+      "role": "recorded five-second ball-only playback windows",
+      "track_count": 15,
+      "sample_count": 3749,
+      "aggregate_duration_s": 74.774,
+      "sha256": "f33e3550c504a6dbad5f691c7cbe3819d80eed2f60d665c570ad95565f57daeb"
+    },
+    {
+      "path": "data/kick_models.json",
+      "role": "independent derived physics model output",
+      "estimate_count": 15,
+      "sha256": "7bfae232177872f33877146f16b582371f98e7d99d4d47ecda5980d0a7a76b08"
+    }
+  ]
+}

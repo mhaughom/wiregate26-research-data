@@ -1,0 +1,5 @@
+__pycache__/
+.venv/
+*.pyc
+*.pyo
+data/kick_models.regenerated.json
