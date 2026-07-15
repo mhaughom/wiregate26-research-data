@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WIREGATE 26 data manifest",
+  "type": "object",
+  "required": ["record_version", "recorded_on", "project", "coordinate_reference", "comparison", "files"],
+  "properties": {
+    "record_version": {"type": "integer"}, "recorded_on": {"type": "string", "format": "date"},
+    "project": {"type": "string"}, "coordinate_reference": {"type": "object"},
+    "comparison": {"type": "object"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["path", "role", "schema", "sha256"],
+        "properties": {
+          "path": {"type": "string"}, "role": {"type": "string"}, "schema": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}

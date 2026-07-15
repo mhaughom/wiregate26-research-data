@@ -1,0 +1,9 @@
+Licensing index
+===============
+
+Original scripts and documentation are licensed under the MIT License in
+LICENSE-CODE.
+
+That licence does not cover the third-party tracking extracts or third-party
+facts embodied by files under data/. No open-data licence is asserted for those
+extracts. Read DATA_NOTICE.md before reuse or redistribution.

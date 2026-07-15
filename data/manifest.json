@@ -1,12 +1,13 @@
 {
-  "record_version": 1,
-  "recorded_on": "2026-07-14",
+  "record_version": 2,
+  "recorded_on": "2026-07-15",
   "project": "WIREGATE 26",
   "coordinate_reference": {
     "pitch_length_m": 105.03,
     "pitch_width_m": 68.03,
     "incident_xy": "normalized pitch coordinates",
-    "trajectory_rows": "[relative_time_s, pitch_x_m, pitch_y_m, height_m]"
+    "trajectory_rows": "[relative_time_s, pitch_x_m, pitch_y_m, height_m]",
+    "source_timeline_origin_ms": 1783806352112
   },
   "comparison": {
     "extracted_tracks": 15,
@@ -18,6 +19,7 @@
     {
       "path": "data/incident_ball_track.csv",
       "role": "recorded incident ball coordinates",
+      "schema": "schemas/incident-ball-track.md",
       "sample_count": 1203,
       "duration_s": 24.084,
       "first_source_timestamp_ms": 1783806426627,
@@ -27,6 +29,7 @@
     {
       "path": "data/kick_analysis_arcs.json",
       "role": "recorded long-kick analysis arcs",
+      "schema": "schemas/kick-analysis-arcs.schema.json",
       "track_count": 15,
       "sample_count": 3174,
       "aggregate_duration_s": 63.245,
@@ -35,6 +38,7 @@
     {
       "path": "data/kick_playback_tracks.json",
       "role": "recorded five-second ball-only playback windows",
+      "schema": "schemas/kick-playback-tracks.schema.json",
       "track_count": 15,
       "sample_count": 3749,
       "aggregate_duration_s": 74.774,
@@ -43,8 +47,30 @@
     {
       "path": "data/kick_models.json",
       "role": "independent derived physics model output",
+      "schema": "schemas/kick-models.schema.json",
       "estimate_count": 15,
       "sha256": "7bfae232177872f33877146f16b582371f98e7d99d4d47ecda5980d0a7a76b08"
+    },
+    {
+      "path": "data/incident_analysis.json",
+      "role": "independent incident impulse-model analysis",
+      "schema": "schemas/incident-analysis.schema.json",
+      "sample_count": 205,
+      "sha256": "8b5156abda6b45e7cf67f644de778a74e697b27912d16cf035ea30763bdf3d5c"
+    },
+    {
+      "path": "data/kick_selection.json",
+      "role": "disclosed comparison-window selection record",
+      "schema": "schemas/kick-selection.schema.json",
+      "track_count": 15,
+      "sha256": "1adc01420921d99fe020c1673eea5f5ed2f726469cf31eec66ba23f2f2339099"
+    },
+    {
+      "path": "data/source_integrity.json",
+      "role": "checksums for locally retained undistributed source files",
+      "schema": "schemas/source-integrity.schema.json",
+      "source_file_count": 11,
+      "sha256": "754e16e73bfd5730d847b229eb3c6a53abcc300cf164af5b8047306c278548a9"
     }
   ]
 }

@@ -1,5 +1,8 @@
 # Data notice
 
+For a plain-language description of the dataset, its origin, intended use and
+claim limits, read [DATA_INFORMATION_LETTER.md](DATA_INFORMATION_LETTER.md).
+
 This repository includes a limited, incident-focused extract of factual ball
 tracking coordinates used for independent reporting, criticism, technical
 analysis and public verification.

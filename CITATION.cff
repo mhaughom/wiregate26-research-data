@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this dataset or its analysis, cite this release and state which files and commit you used."
+title: "WIREGATE 26: ball-only tracking extracts and reproducible incident analysis"
+type: dataset
+version: 1.0.0
+date-released: 2026-07-15
+authors:
+  - family-names: Haughom
+    given-names: Mathias
+repository-code: "https://github.com/mhaughom/wiregate26-research-data"
+url: "https://wiregate26.com"
+abstract: >-
+  Limited ball-only tracking extracts and independent physics calculations for
+  the Norway–England 2026 World Cup goal-kick incident. The MIT licence applies
+  to original code and documentation only; DATA_NOTICE.md governs the
+  third-party tracking extracts.
+keywords:
+  - football tracking
+  - sports physics
+  - EPTS
+  - reproducible research

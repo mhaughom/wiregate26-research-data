@@ -14,6 +14,12 @@ not a licence or statement of permission.
 - Source manifest: `https://fwc26-bbc-prod.r2.immersiv.cloud/tracking/285023/default/151706/scrubbed/stream.malt`
 - Local acquisition record date: 12 July 2026
 
+The manifest returned HTTP 403 when rechecked on 15 July 2026. Its retained
+copy has SHA-256 `1705716bbda3ae4bf225420b6fb8df8bd9977078687d94d3e2487a96d70a9e11`.
+Hashes and sizes for all nine incident-source segments and the retained full
+ball CSV are recorded in `data/source_integrity.json`; the third-party files
+themselves are not redistributed.
+
 The BBC experience described its content as official FIFA tracking and used
 Immersiv.io technology. WIREGATE 26 is not affiliated with or endorsed by FIFA,
 the BBC or Immersiv.io.
@@ -35,3 +41,10 @@ times start at zero for each extracted window.
 
 Run `python3 scripts/verify_dataset.py` to compare every distributed data file
 with the SHA-256 values in `data/manifest.json`.
+
+Researchers who lawfully possess the source files can verify them with
+`scripts/verify_source_files.py`, regenerate the incident CSV with
+`scripts/extract_ball_track.py`, and rebuild the comparison extracts with
+`scripts/rebuild_extracts.py`. The selected goalkeeper-kick timestamps are
+disclosed in `data/kick_selection.json`. Repeating the original player-based
+attribution requires player data that is not distributed here.

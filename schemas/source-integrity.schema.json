@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source integrity record",
+  "type": "object",
+  "required": ["record_version", "recorded_on", "availability", "manifest_url", "retained_source_files"],
+  "properties": {
+    "record_version": {"type": "integer"}, "recorded_on": {"type": "string", "format": "date"},
+    "availability": {"type": "string"}, "manifest_url": {"type": "string", "format": "uri"},
+    "manifest_was_accessible_on": {"type": "string", "format": "date"},
+    "manifest_returned_http_403_on": {"type": "string", "format": "date"},
+    "retained_source_files": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["name", "role", "size_bytes", "sha256"],
+        "properties": {
+          "name": {"type": "string"}, "role": {"type": "string"},
+          "size_bytes": {"type": "integer", "minimum": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

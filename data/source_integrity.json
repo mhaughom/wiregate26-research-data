@@ -1,0 +1,76 @@
+{
+  "record_version": 1,
+  "recorded_on": "2026-07-15",
+  "availability": "Hashes are public; the third-party source files are not redistributed by this repository.",
+  "manifest_url": "https://fwc26-bbc-prod.r2.immersiv.cloud/tracking/285023/default/151706/scrubbed/stream.malt",
+  "manifest_was_accessible_on": "2026-07-12",
+  "manifest_returned_http_403_on": "2026-07-15",
+  "retained_source_files": [
+    {
+      "name": "stream.malt",
+      "role": "source segment manifest",
+      "size_bytes": 378671,
+      "sha256": "1705716bbda3ae4bf225420b6fb8df8bd9977078687d94d3e2487a96d70a9e11"
+    },
+    {
+      "name": "1783806424184-1783806427167.ats",
+      "role": "incident extract source segment",
+      "size_bytes": 3688491,
+      "sha256": "c80039b8f9e88ba21a1ef87663c8d521abc4b1be476873069f9f377e7cc6dd38"
+    },
+    {
+      "name": "1783806427187-1783806430170.ats",
+      "role": "incident extract source segment",
+      "size_bytes": 3691140,
+      "sha256": "d59d497583b936cf52d4e2310e5c301af86a70c4ea0877dfb30f789bc9c3601f"
+    },
+    {
+      "name": "1783806430190-1783806433173.ats",
+      "role": "incident extract source segment",
+      "size_bytes": 3691190,
+      "sha256": "23e8d517cf122b79373b69d49c68887ce8ae4e98f1b1ab772001491e5c82724b"
+    },
+    {
+      "name": "1783806433193-1783806436176.ats",
+      "role": "incident extract source segment",
+      "size_bytes": 3690510,
+      "sha256": "50015be6d4f2dedd2c9786e2427a631a57a17fe032f134329306aa568f50f5e5"
+    },
+    {
+      "name": "1783806436196-1783806439179.ats",
+      "role": "incident extract source segment",
+      "size_bytes": 3690740,
+      "sha256": "1626f3b0192d3f0a2699c2a8be7a0054d9f785106e815ea3bef042c38ec503f6"
+    },
+    {
+      "name": "1783806439199-1783806442182.ats",
+      "role": "incident extract source segment",
+      "size_bytes": 3690535,
+      "sha256": "f9ce915d30a0fb647bc1fb60bcfb3b2e7f3ccb31452f52b10b361c10f7756957"
+    },
+    {
+      "name": "1783806442202-1783806445185.ats",
+      "role": "incident extract source segment",
+      "size_bytes": 3690865,
+      "sha256": "510a05a836f4cb63e914d6561a4db500c1e97d3be9d5241ad0f3e5b701eed872"
+    },
+    {
+      "name": "1783806445205-1783806448188.ats",
+      "role": "incident extract source segment",
+      "size_bytes": 3690190,
+      "sha256": "239f4523f95fae826d5fe7a670ba0690969b0b239e4ae702927d481bd5987b52"
+    },
+    {
+      "name": "1783806448208-1783806451191.ats",
+      "role": "incident extract source segment",
+      "size_bytes": 3689995,
+      "sha256": "15309aa5e35b847bdc50271ed972c2ee23147b28660b3961bcf67437ccc72794"
+    },
+    {
+      "name": "ball_full.csv",
+      "role": "locally extracted full-match ball stream used to select comparison windows",
+      "size_bytes": 16513903,
+      "sha256": "105806a78ab5442cac07d12adbd11d35d7334396c0b5a2b6e41b7987d4e77425"
+    }
+  ]
+}
