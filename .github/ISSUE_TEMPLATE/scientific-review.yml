@@ -1,0 +1,42 @@
+name: Scientific review or correction
+description: Report a reproducible error, alternative model, or interpretation concern.
+title: "[review] "
+labels: ["scientific-review"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Release or commit
+      description: Give the release tag or full commit SHA you reviewed.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Source coordinates or provenance
+        - Extraction or coordinate conversion
+        - Physics or numerical model
+        - Interpretation or wording
+        - Rights, privacy, or attribution
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding
+      description: State the issue and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide commands, calculations, code, or a minimal example.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction or alternative

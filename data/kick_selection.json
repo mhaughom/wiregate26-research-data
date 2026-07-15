@@ -1,0 +1,23 @@
+{
+  "record_version": 1,
+  "selection_basis": "Long airborne spans attributed locally to the goalkeeper nearest the launch. Player tracking used for attribution is not redistributed.",
+  "incident_timestamp_ms": 1783806435336,
+  "playback_window_s": 5.0,
+  "kicks": [
+    {"timestamp_ms": 1783803684147, "match_minute": 0.1, "analysis_sample_count": 203, "in_play_comparison": true},
+    {"timestamp_ms": 1783803801064, "match_minute": 2.0, "analysis_sample_count": 199, "in_play_comparison": true},
+    {"timestamp_ms": 1783804116819, "match_minute": 7.3, "analysis_sample_count": 239, "in_play_comparison": true},
+    {"timestamp_ms": 1783805908950, "match_minute": 37.2, "analysis_sample_count": 202, "in_play_comparison": true},
+    {"timestamp_ms": 1783806005486, "match_minute": 38.8, "analysis_sample_count": 197, "in_play_comparison": true},
+    {"timestamp_ms": 1783806398919, "match_minute": 45.3, "analysis_sample_count": 240, "in_play_comparison": true},
+    {"timestamp_ms": 1783806435336, "match_minute": 45.9, "analysis_sample_count": 205, "in_play_comparison": true},
+    {"timestamp_ms": 1783806583063, "match_minute": 48.4, "analysis_sample_count": 230, "in_play_comparison": true},
+    {"timestamp_ms": 1783807933432, "match_minute": 70.9, "analysis_sample_count": 176, "in_play_comparison": true},
+    {"timestamp_ms": 1783808586805, "match_minute": 81.8, "analysis_sample_count": 188, "in_play_comparison": true},
+    {"timestamp_ms": 1783809652210, "match_minute": 99.5, "analysis_sample_count": 291, "in_play_comparison": true},
+    {"timestamp_ms": 1783810673390, "match_minute": 116.6, "analysis_sample_count": 294, "in_play_comparison": true},
+    {"timestamp_ms": 1783810725001, "match_minute": 117.4, "analysis_sample_count": 169, "in_play_comparison": true},
+    {"timestamp_ms": 1783811397013, "match_minute": 128.6, "analysis_sample_count": 142, "in_play_comparison": false, "exclusion_reason": "restart after the deciding goal"},
+    {"timestamp_ms": 1783812291887, "match_minute": 143.5, "analysis_sample_count": 199, "in_play_comparison": true}
+  ]
+}

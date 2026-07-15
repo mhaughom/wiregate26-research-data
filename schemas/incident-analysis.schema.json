@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Incident impulse analysis",
+  "type": "object",
+  "required": ["analysis_version", "claim_scope", "source", "method", "results", "impulse_time_sensitivity", "recorded_flight", "no_impulse_counterfactual"],
+  "properties": {
+    "analysis_version": {"const": 1},
+    "claim_scope": {"type": "string", "minLength": 20},
+    "source": {
+      "type": "object",
+      "required": ["file", "kick_timestamp_ms", "flight_end_timestamp_ms", "sample_count", "duration_s"],
+      "properties": {
+        "file": {"type": "string"}, "kick_timestamp_ms": {"type": "integer"},
+        "flight_end_timestamp_ms": {"type": "integer"}, "sample_count": {"type": "integer", "minimum": 1},
+        "duration_s": {"type": "number", "exclusiveMinimum": 0}
+      },
+      "additionalProperties": true
+    },
+    "method": {"type": "object"},
+    "results": {
+      "type": "object",
+      "required": ["model_rms_cm", "selected_impulse_timestamp_ms", "impulse_magnitude_mps", "touchdown_horizontal_miss_m"],
+      "properties": {
+        "model_rms_cm": {"type": "object", "required": ["A", "B", "C", "D"]},
+        "selected_impulse_timestamp_ms": {"type": "integer"},
+        "impulse_magnitude_mps": {"type": "number", "minimum": 0},
+        "touchdown_horizontal_miss_m": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": true
+    },
+    "impulse_time_sensitivity": {"type": "array", "minItems": 10},
+    "recorded_flight": {"type": "array", "minItems": 100},
+    "no_impulse_counterfactual": {"type": "array", "minItems": 100}
+  },
+  "additionalProperties": false
+}

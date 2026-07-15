@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Kick selection record",
+  "type": "object",
+  "required": ["record_version", "selection_basis", "incident_timestamp_ms", "playback_window_s", "kicks"],
+  "properties": {
+    "record_version": {"type": "integer"}, "selection_basis": {"type": "string"},
+    "incident_timestamp_ms": {"type": "integer"}, "playback_window_s": {"type": "number"},
+    "kicks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["timestamp_ms", "match_minute", "analysis_sample_count", "in_play_comparison"],
+        "properties": {
+          "timestamp_ms": {"type": "integer"}, "match_minute": {"type": "number"},
+          "analysis_sample_count": {"type": "integer", "minimum": 1},
+          "in_play_comparison": {"type": "boolean"}, "exclusion_reason": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

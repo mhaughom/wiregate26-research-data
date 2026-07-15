@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 *.pyo
 data/kick_models.regenerated.json
+data/incident_analysis.regenerated.json
+data/kick_analysis_arcs.regenerated.json
+data/kick_playback_tracks.regenerated.json

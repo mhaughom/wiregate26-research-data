@@ -32,8 +32,9 @@ The website maps these coordinates into a y-up 3D scene as
 Long airborne spans were detected from the full source ball stream using a
 height threshold of 1 metre, a minimum 2.2 second duration and a minimum
 6 metre apex. The player nearest the ball at each launch was used only during
-local attribution to identify kicks by the same goalkeeper. No player samples
-or identifiers are distributed in this repository.
+local attribution to identify kicks by the same goalkeeper. No player entity
+identifiers or coordinate samples are distributed; only the delivered team code
+and shirt number used to describe the selected taker remain in the arc metadata.
 
 The `s` arrays in `kick_analysis_arcs.json` are horizontal distances projected
 onto each kick's launch-to-end direction. The paired `z` arrays are delivered
@@ -45,6 +46,34 @@ restart after the deciding goal. The other 14 form the comparison displayed by
 the site.
 
 ## Derived physical model
+
+Two related analyses are published and should not be conflated.
+
+### Incident model comparison
+
+`scripts/analyze_incident.py` uses the 205-sample incident flight from source
+timestamp `1783806435336` through `1783806439420`. It fits four models to the
+complete flight: constant aerodynamics (A), exponential Magnus decay (B), A
+plus one velocity impulse (C), and B plus an impulse at the model-C time (D).
+
+Impulse time is discrete. The script first searches a 0.2-second grid and then
+every recorded sample boundary within 0.25 seconds of the coarse minimum. All
+continuous parameters are refitted from the same initial state at every
+candidate. This avoids describing a discontinuous change time as though a
+gradient optimizer could estimate it continuously.
+
+The no-impulse counterfactual uses model C's fitted launch and aerodynamic
+parameters with the fitted impulse removed. For a like-for-like touchdown, the
+final three recorded metres before interruption are fitted by least squares and
+continued ballistically to a ball-centre height of 0.11 m. The published result
+is the horizontal distance between those two touchdown points.
+
+`data/incident_analysis.json` contains the fitted parameters, A–D errors,
+impulse-time sensitivity curve, recorded flight and counterfactual. The source
+did not provide covariance or filtering metadata, so the project does not
+convert optimizer curvature into a formal confidence interval.
+
+### All-kicks comparison
 
 `scripts/generate_kick_models.py` fits each kick only from its first tracked
 sample through its first sustained apex. Later samples do not enter the
@@ -66,6 +95,11 @@ by nonlinear least squares. The exported comparison is between:
 
 The second continuation is a local extrapolation, not a separately observed
 landing position. The model is exploratory and its assumptions are not unique.
+
+The all-kicks fit uses launch-to-apex samples and answers a different comparison
+question from the full-flight A–D incident analysis. Its incident touchdown
+number should not be substituted for the versioned incident result without
+stating the different fit window.
 
 ## Limitations
 
