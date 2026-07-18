@@ -97,6 +97,7 @@ selection is disclosed rather than presented as independently reproduced.
 - [Information letter](DATA_INFORMATION_LETTER.md)
 - [Methodology](METHODOLOGY.md)
 - [Provenance and integrity](PROVENANCE.md)
+- [Connected-ball IMU magnitude graphic](CONNECTED_BALL_EVIDENCE.md)
 - [Data notice](DATA_NOTICE.md)
 - [Independent review request](REVIEW_REQUEST.md)
 - [Contributing and corrections](CONTRIBUTING.md)
